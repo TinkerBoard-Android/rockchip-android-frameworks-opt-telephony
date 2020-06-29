@@ -223,7 +223,7 @@ public class SubscriptionController extends ISub.Stub {
 	} else {
 		String sim_state ;
 		sim_state = SystemProperties.get("gsm.sim.state");
-		if(sim_state.equals("READY") || sim_state.equals("LOADED")){
+		if(sim_state.equals("READY") || sim_state.equals("LOADED") || sim_state.equals("PIN_REQUIRED")){
 			logd("sim_state is :" + sim_state);
 			return true;
 		}else
